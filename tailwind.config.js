@@ -9,13 +9,18 @@ export default {
         './resources/views/**/*.blade.php',
     ],
 
+    daisyui: {
+        themes: ["light"],
+      },
+
     theme: {
         extend: {
             fontFamily: {
                 sans: ['Figtree', ...defaultTheme.fontFamily.sans],
             },
+        
         },
     },
 
-    plugins: [forms],
+    plugins: [forms, require("daisyui")],
 };
